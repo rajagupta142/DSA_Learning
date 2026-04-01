@@ -28,7 +28,7 @@
 //     }
 //   while(start<=end){
 //     int mid= start + (end-start)/2;
-//     if(allocatePage(mid,arr,k)){
+//     if(allocatePage(mid,arr,k)){      
 //         ans=mid;
 //         end=mid-1;
 //     }
@@ -54,7 +54,7 @@
 //             pages=arr[i];
 //         }
 //     }
-//     return count<=k;
+//     return count<=k;                 //this will return true or false
 // }
 
 
@@ -68,26 +68,26 @@
 // Worst case → one student takes all books
 
 // mid=70 (i need to allocate all the book between A and B within this limit if it is possible?)
-// mid=maxPage = 70
+// mid=maxPage = 70   
 
-// let's check
-// int count=1,pages=arr[0]=10;   // i gave first book to student A
+// let's check                    //sabse bada page is 40,so baaki sab isse chota hoga so,i can give first book to A
+// int count=1,pages=arr[0]=10;   // i gave first book to student A,now A have 10 pages
 
 // Now, i need to check from 1 to n 
 // for(int i=1;i<arr.size();i++){
 
 
-// pages+=arr[i]; ---> pages=10+20=30
+// pages+=arr[i]; ---> pages=10+20=30  (if allocation of more pages to A is possible )
 // if(pages>maxPage){----> if(30>70)---No, so i can give this book to A
-// i gave 2nd book(20 pages) to A 
+// i gave 2nd book(20 pages) to A  , now A have 30 pages 
 
-// pages+=arr[i];--->pages=30+30=60
+// pages+=arr[i];--->pages=30+30=60  (if allocation of more pages to A is possible )
 // if(pages>maxPage){----> if(60>70)---No, so i can give this book to A
-// i gave 3rd book(30 pages) to A 
+// i gave 3rd book(30 pages) to A , now A have 60 pages 
 
 // pages+=arr[i];--->pages=60+40=100
 // if(pages>maxPage){----> if(100>70)---yes, so i can't give this book to A,i've to give to B
-// i gave 4th book(40 pages) to B
+// i gave 4th book(40 pages) to B ,  now B have 40 pages 
 // if(pages>maxPage){
 //    count++;          //i gave 4th book(40 pages) to B  so, count=2;
 //    pages=arr[i];     //now B have 40 pages if there are more book i can check if
@@ -99,12 +99,12 @@
 //   while(start<=end){
 //     int mid= start + (end-start)/2;
 //     if(allocatePage(mid,arr,k)){        ---->true,allocation is possible with 70 page
-//         ans=mid;
-//         end=mid-1;
+//         ans=mid;                 // so, i will store this as (ans) and find if 
+//         end=mid-1;              // allocation is possible with less than 70 page
 //     }
-//     else{
-//         start=mid+1;
-//     }
+//     else{               //  if(allocatePage(mid,arr,k)){ // i can take (mid,arr,k)) in any
+//         start=mid+1;    // order but when you define this function you have to have the
+//     }                   // same order
 //   }
 
 
