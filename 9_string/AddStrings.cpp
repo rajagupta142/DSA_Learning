@@ -1,5 +1,45 @@
 // // https://leetcode.com/problems/add-strings/description/
 
+
+// Approach 1 
+
+// class Solution {
+// public:
+//     string addStrings(string num1, string num2) {
+
+//         int n1 = num1.size();
+//         int n2 = num2.size();
+//         string ans = "";
+//         int carry = 0;
+//         int start1 = n1 - 1;
+//         int start2 = n2 - 1;
+
+//         while (start1 >= 0 || start2 >= 0 || carry != 0) {
+//             int sum = carry;
+
+//             if (start1 >= 0) {
+//                 sum += num1[start1] - '0';
+//                 start1--;
+//             }
+
+//             if (start2 >= 0) {
+//                 sum += num2[start2] - '0';
+//                 start2--;
+//             }
+
+//             ans += sum % 10 + '0';
+//             carry = sum / 10;
+//         }
+//         reverse(ans.begin(), ans.end());
+//         return ans;
+//     }
+// }
+// ;
+
+
+// APPROACH 2
+
+
 // class Solution {
 // public:
 //     string addStrings(string num1, string num2) {
