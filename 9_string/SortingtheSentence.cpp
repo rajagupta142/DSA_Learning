@@ -1,6 +1,49 @@
 // // https://leetcode.com/problems/sorting-the-sentence/description/
 
 
+// Approach 1 
+
+
+// class Solution {
+// public:
+//     string sortSentence(string s) {
+        
+//         string word = "";
+//         string ans = "";
+//         vector<string>sentArr(9);
+
+//         for(int i=0;i<s.size();i++){
+
+//             if(s[i]>='1' && s[i]<='9'){
+//                 sentArr[s[i]-'1'] = word;
+//                 word = "";
+//             }
+//             else if(s[i]!=' '){
+//               word += s[i];
+//             }
+//         }
+
+//         for(int i=0;i<sentArr.size();i++){
+//             if(sentArr[i].size()!=0){
+//                 if(ans.size()!= 0){
+//                     ans += " ";
+//                 }
+//                 ans += sentArr[i];    
+//             }
+//         }
+//         return ans;
+        
+//     }
+// };
+
+
+
+
+//    APPROACH 2
+
+
+
+
 // class Solution {
 // public:
 //     string sortSentence(string s) {
